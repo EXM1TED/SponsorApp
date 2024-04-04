@@ -1,0 +1,30 @@
+﻿<Window x:Class="Для_Абдурасула.Windows.SponsorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Для_Абдурасула.Windows"
+        mc:Ignorable="d"
+        Title="SponsorWindow" Height="550" Width="800"
+        MinHeight="465" MinWidth="750">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Background="#FF464646">
+            <Button Name="btnReturnToMainWindow" Content="Назад" Height="30" Width="80" Foreground="Black" Margin="10" HorizontalAlignment="Left" Click="btnReturnToMainWindow_Click"/>
+            <TextBlock Text="MARATHON SKILLS 2024" Margin="-40" Width="560" FontSize="25" FontFamily="Arial" FontWeight="Bold" Foreground="White" Height="67"/>
+        </StackPanel>
+        <Frame Grid.Row="1"
+               Name="MainSponsorFrame"
+               NavigationUIVisibility="Hidden"/>
+        <Grid Grid.Row="4"
+          Background="#FF464646">
+            <TextBlock Text="18 дней 8 часов и 17 минут до начала марофона!"
+                   Foreground="White"
+                   FontSize="18"/>
+        </Grid>
+    </Grid>
+</Window>

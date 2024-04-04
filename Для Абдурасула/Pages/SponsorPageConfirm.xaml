@@ -1,0 +1,50 @@
+﻿<Page x:Class="Для_Абдурасула.Pages.SponsorPageConfirm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Для_Абдурасула.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SponsorPageConfirm">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Спасибо за вашу спонсурскую поддержку!" Grid.Row="1"
+               HorizontalAlignment="Center"
+               TextAlignment="Center"
+               FontSize="24"
+               Foreground="#FF464646"/>
+        <StackPanel Grid.Row="2" Orientation="Vertical"
+                VerticalAlignment="Top">
+            <TextBlock Grid.Row="2"
+        Text="Спасибо за поддержку бегуна в Marathon Skills 2016! "
+        Style="{StaticResource MainSponsorHeadingTextTextBlock}"/>
+            <TextBlock Grid.Row="2"
+        Text="которую вы хотели бы спонсировать. Спасибо за вашу поддержку бегунов и их"
+        Style="{StaticResource MainSponsorHeadingTextTextBlock}"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    Grid.Row="2">
+            <TextBlock Text="Иван Прудов(204) из Russia"
+                       FontSize="30"
+                       Foreground="DimGray"/>
+            <TextBlock Text="Фонд кошек"
+                       FontSize="28"
+                       Foreground="#FF464646"/>
+            <TextBlock
+                Text="{Binding Path=cash}"
+                Foreground="#FF464646"
+                FontSize="42"/>
+            <Button Name="btnReturnToMainWindow" 
+        Content="Назад"
+        Width="70"
+        Height="Auto"
+        Click="btnReturnToMainWindow_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
